@@ -200,6 +200,99 @@ console.log(func5("主田", 24)); // { name: "主田", age: 24 }
 
 // === 分割代入 {} [] ===
 
+// 例：分割代入を使用しない文字列を出力
+const myProfile = {
+  name: "主田",
+  age: 24,
+};
+
+const message = `私の名前は${myProfile.name}です。年齢は${myProfile.age}歳です。`;
+console.log(message); // 私の名前は主田です。年齢は24歳です。
+
+
+// 例：分割代入を使用
+const myProfile = {
+  name: "主田",
+  age: 24,
+};
+
+// オブジェクトの分割代入
+const { name, age } = myProfile; 
+
+const message = `私の名前は${name}です。年齢は${age}歳です。`;
+console.log(message); // 私の名前は主田です。年齢は24歳です。
+
+
+// 例：一部のみ取り出す
+// 一部のみ取り出す
+const { age } = myProfile;
+
+//　例：順番を変えて取り出す
+// どんな順番でも大丈夫
+const { age, name } = myProfile;
+
+
+// 例：抽出したプロパティに別名をつける
+const myProfile = {
+  name: "主田",
+  age: 24,
+};
+
+// コロンで別の変数名を使用
+const { name: newName, age: newAge } = myProfile;
+
+const message = `私の名前は${newName}です。年齢は${newAge}歳です。`;
+console.log(message); // 私の名前は主田です。年齢は24歳です。
+
+
+// 例：配列のインデックスを指定して代入を行う
+const myProfile = ["主田", 24];
+
+const message = `私の名前は${myProfile[0]}です。年齢は${myProfile[1]}歳です。`;
+console.log(message); // 私の名前は主田です。年齢は24歳です。
+
+
+// 例：配列に対して分割代入を行う
+const myProfile = ["主田", 24];
+
+// 配列の分割代入
+const [name, age] = myProfile;
+
+const message = `私の名前は${name}です。年齢は${age}歳です。`;
+console.log(message); // 私の名前は主田です。年齢は24歳です。
+
+
+// 例：配列に必要な要素のみ取り出す
+// 1つ目のみ必要な場合
+const [name] = myProfile;
+
+
+
+// === デフォルト値 = ===
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
