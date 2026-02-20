@@ -114,18 +114,91 @@ console.log(message); // 皆さんこんにちは！今日から3月です。
 
 // === アロー関数 () => {} ===
 
+// 例：従来の関数（使用例１）
+// 従来の関数を定義
+function func1(value) {
+  return value;
+}
+
+// 実行した結果を出力
+console.log(func1("func1です")); // func1です
+
+
+// 例：従来の関数（使用例２）
+// 関数を定義して変数に格納
+const func1 = function (value) {
+  return value;
+}
+
+// 実行した結果を出力
+console.log(func1("func1です")); // func1です
+
+
+// 例：アロー関数
+// アロー関数を定義
+const func2 = (value) => {
+  return value;
+}
+
+// 実行した結果を出力
+console.log(func2("func2です")); // func2です
+
+
+// 例：アロー関数の省略記法
+// アロー関数を定義 ※引数が1つなのでカッコを省略
+const func2 = value => {
+  return value;
+}
+
+// 実行した結果を出力
+console.log(func2("func2です")); // func2です
+
+
+// 例：引数が2つ以上の場合
+// 引数が2つ以上だとエラー
+const func3 = value1, value2 => {
+  return value1 + value2;
+}
+
+// 2つ以上の場合はカッコで囲む
+const func3 = (value1, value2) => {
+  return value1 + value2;
+}
+
+
+// 例：returnの省略
+// 処理を単一行で返すので {} を省略
+const func4 = (num1, num2) => num1 + num2;
+
+//実行した結果を出力
+console.log(func4(10, 20)); // 30
+
+
+// 例：誤ったreturnの書る役
+// {}で囲ったのにreturnを書いていない
+const func4 = (num1, num2) => {
+  num1 + num2
+}
+
+//実行した結果を出力（何も返却されない）
+console.log(func4(10, 20)); // undefined
+
+
+// 例：()を用いて1行としてまとめる
+// カッコで囲んでまとめて省略して返却
+const func5 = (val1, val2) => (
+  {
+    name: val1,
+    age: val2,
+  }
+)
+
+// 実行した結果を出力
+console.log(func5("主田", 24)); // { name: "主田", age: 24 }
 
 
 
-
-
-
-
-
-
-
-
-
+// === 分割代入 {} [] ===
 
 
 
