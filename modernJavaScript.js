@@ -270,9 +270,48 @@ const [name] = myProfile;
 
 // === デフォルト値 = ===
 
+// 例：メッセージを出力する関数
+const sayHello = (name) => console.log(`こんにちは！${name}さん！`);
+sayHello("主田"); // こんにちは！主田さん！
+
+
+// 例：実行時に引数をを渡さなかった場合
+const sayHello = (name) => console.log(`こんにちは！${name}さん！`);
+sayHello(); // こんにちは！undefinedさん！
+
+
+// 例：デフォルト値の設定
+const sayHello = (name = "ゲスト") => console.log(`こんにちは！${name}さん！`);
+sayHello(); // こんにちは！ゲストさん！
+sayHello("主田"); // こんにちは！主田さん！
+
+
+// 例：存在しないプロパティを出力
+// nameを削除
+const myProfile = {
+  age: 24,
+}
+
+// 存在しないname
+const { name } = myProfile;
+
+const message = `こんにちは！${name}さん！`;
+console.log(message); // こんにちは！undefinedさん！
+
+
+// 例：分割代入時にデフォルト値を設定
+const myProfile = {
+  age: 24,
+}
+
+const { name = "ゲスト" } = myProfile;
+
+const message = `こんにちは！${name}さん！`;
+console.log(message); // こんにちは！ゲストさん！
 
 
 
+// === スプレッド構文 ... ===
 
 
 
