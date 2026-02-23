@@ -313,12 +313,116 @@ console.log(message); // こんにちは！ゲストさん！
 
 // === スプレッド構文 ... ===
 
+// 例：配列
+const arr1 = [1, 2];
+console.log(arr1); // [1, 2]
+
+
+// 書式：スプレッド構文
+const arr1 = [1, 2];
+console.log(arr1); // [1, 2]
+console.log(...arr1); // 1 2
+
+
+// 例：一般的な関数とスプレッド構文
+const arr1 = [1, 2];
+
+const summaryFunc = (num1, num2) => console.log(num1 + num2);
+
+// 普通に配列の値を渡す場合
+summaryFunc(arr1[0], arr1[1]); // 3
+
+// スプレッド構文を用いた方法
+summaryFunc(...arr1); // 3
+
+
+// 例：要素をまとめる
+const arr2 = [1, 2, 3, 4, 5];
+
+// 分割代入時に残りを「まとめる」
+const [num1, num2, ...arr3] = arr2;
+
+console.log(num1); // 1
+console.log(num2); // 2
+console.log(arr3); // [3, 4, 5]
+
+
+// 例：2つの配列
+const arr4 = [10, 20];
+const arr5 = [30, 40];
+
+
+// 例：スプレッド構文を用いて新たな配列を生成
+const arr4 = [10, 20];
+const arr5 = [30, 40];
+
+// スプレッド構文でコピー
+const arr6 = [...arr4];
+
+console.log(arr4); // [10, 20]
+console.log(arr6); // [10, 20]
+
+
+// 例：2つの配列の結合
+const arr4 = [10, 20];
+const arr5 = [30, 40];
+
+// スプレッド構文で結合
+const arr7 = [...arr4, ...arr5];
+
+console.log(arr7); // [10, 20, 30, 40]
+
+
+// 例：複数のオブジェクトの結合
+const obj4 = { val1: 10, val2: 20 };
+const obj5 = { val3: 30, val4: 40 };
+
+// スプレッド構文でコピー
+const obj6 = { ...obj4 };
+// スプレッド構文で結合
+const obj7 = { ...obj4, ...obj5 };
+
+console.log(obj6); // {val1: 10, val2: 20}
+console.log(obj7); // {val1: 10, val2: 20, val3: 30, val4: 40}
+
+
+// 例：=(イコール)によるコピー
+const arr4 = [10, 20];
+
+// = でコピー
+const arr8 = arr4;
+
+console.log(arr8); // [10, 20]
+
+
+// 例：コピーに起因する予期せぬ挙動
+const arr4 = [10, 20];
+
+// = でコピー
+const arr8 = arr4;
+
+// arr8の最初の要素を100に書き換える
+arr8[0] = 100;
+
+console.log(arr4); // [100, 20]
+console.log(arr8); // [100, 20]
+
+
+// 例：スプレッド構文を用いたコピー
+const arr4 = [10, 20];
+
+// スプレッド構文でコピー
+const arr8 = [...arr4];
+
+// arr8の最初の要素を書き換える
+arr8[0] = 100;
+
+console.log(arr4); // [10, 20]
+console.log(arr8); // [100, 20]
 
 
 
-
-
-
+// === オブジェクトの省略記法 ===
 
 
 
