@@ -424,8 +424,34 @@ console.log(arr8); // [100, 20]
 
 // === オブジェクトの省略記法 ===
 
+// 例：プロパティ名と変数名が同一の場合１
+const name = "主田";
+const age = 24;
+
+// ユーザーオブジェクトを定義（プロパティ名は name と age）
+const user = {
+  name: name,
+  age: age,
+}
+
+console.log(user); // {name: '主田', age: 24}
 
 
+// 例：プロパティ名と変数名が同一の場合２
+const name = "主田";
+const age = 24;
+
+// 省略記法
+const user = {
+  name,
+  age,
+}
+
+console.log(user); // {name: '主田', age: 24}
+
+
+
+// === map, filter === 
 
 
 
