@@ -453,14 +453,110 @@ console.log(user); // {name: '主田', age: 24}
 
 // === map, filter === 
 
+// 例：従来の for 文
+// 配列を定義
+const nameArr = ["主田", "先岡", "後藤"];
+
+// for 文を使って配列処理
+for (let index = 0; index < nameArr.length; index++) {
+  console.log(nameArr[index]);
+}
+// 主田
+// 先岡
+// 後藤
+
+
+// 例：配列.map() STEP1
+// 配列を定義
+const nameArr = ["主田", "先岡", "後藤"];
+
+// 配列.map() として使用する
+const nameArr2 = nameArr.map();
+
+
+// 例：配列.map() STEP2
+// 配列を定義
+const nameArr = ["主田", "先岡", "後藤"];
+
+// 配列.map(関数) として使用する
+const nameArr2 = nameArr.map(() => {});
+
+
+// 例：配列.map() STEP3
+// 配列を定義
+const nameArr = ["主田", "先岡", "後藤"];
+
+// 引数(name)に配列の値が設定される。returnで返却する
+const nameArr2 = nameArr.map((name) => {
+  return name;
+});
+
+console.log(nameArr2); // ['主田', '先岡', '後藤']
+
+
+// 例：map 関数を使用
+// 配列を定義
+const nameArr = ["主田", "先岡", "後藤"];
+
+// mapを使って配列処理
+nameArr.map((name) => console.log(name));
+// 主田
+// 先岡
+// 後藤
+
+
+// 例：filter関数で奇数のみ取り出す
+// 配列を定義
+const numArr = [1, 2, 3, 4, 5];
+
+// 奇数（２で割った余りが１）のみ抽出
+const newNumArr = numArr.filter((num) => {
+  return num % 2 === 1;
+});
+
+console.log(newNumArr); // [1, 3, 5]
+
+
+// for文の index で配列の要素順に取り出す
+// 配列を定義
+const numArr = [1, 2, 3, 4, 5];
+
+// 定義済みの index を使用
+for (let index = 0; index < numArr.length; index++) {
+  console.log(`${index + 1}番目は${numArr[index]}です`);
+}
+// 1番目は1です
+// 2番目は2です
+// 3番目は3です
+// 4番目は4です
+// 5番目は5です
+
+
+// 例：map関数の引数で要素順に取り出す
+const nameArr = ["主田", "先岡", "後藤"];
+
+// 第２引数に index が入ってくる
+nameArr.map((name, index) => console.log(`${index + 1}番目は${nameArr[index]}です`));
+// 1番目は主田です
+// 2番目は先岡です
+// 3番目は後藤です
+
+
+// mapを用いた上記仕様の実装例
+const nameArr = ["主田", "先岡", "後藤"];
+const newNameArr = nameArr.map((name) => {
+  if (name === "主田") {
+    return name;
+  } else {
+    return `${name}さん`;
+  }
+});
+
+console.log(newNameArr); // ['主田', '先岡さん', '後藤さん']
 
 
 
-
-
-
-
-
+// === 三項演算子 === 
 
 
 
