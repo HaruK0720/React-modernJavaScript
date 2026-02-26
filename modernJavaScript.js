@@ -558,6 +558,63 @@ console.log(newNameArr); // ['主田', '先岡さん', '後藤さん']
 
 // === 三項演算子 === 
 
+// 書式：三項演算子
+// ある条件 ? 条件が true の時の処理 : 条件が false の時の処理
+
+
+// 例：? と : を使った処理の例
+// １は０より大きいのでtrue、よって : の左側が設定される
+const val1 = 1 > 0 ? "trueです" : "falseです";
+
+console.log(val1); // trueです
+
+
+// 例：入力値に対するメッセージを出す
+// 数値を変換して出力する関数
+const printFormattedNum = (num) => {
+  const formattedNum = typeof num === "number" ? num.toLocaleString() : "数値を入力してください";
+  console.log(formattedNum);
+}
+
+printFormattedNum(1300); // 1,300
+printFormattedNum("1300"); // 数値を入力してください
+
+
+// 例：関数の return 部で三項演算子を用いる
+// ２つの引数の合計が 100 を超えているか判定する関数
+const checkSumOver100 = (num1, num2) => {
+  return num1 + num2 > 100 ? "100を超えています！" : "許容範囲内です";
+}
+
+console.log(checkSumOver100(50, 40)); // 許容範囲内です
+console.log(checkSumOver100(50, 70)); // 100を超えています！
+
+
+
+// === 論理演算子の本当の意味 && || ===
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
