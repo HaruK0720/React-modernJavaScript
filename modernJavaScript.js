@@ -593,11 +593,58 @@ console.log(checkSumOver100(50, 70)); // 100を超えています！
 
 // === 論理演算子の本当の意味 && || ===
 
+// 例：論理演算子を使用した条件分岐
+const flag1 = true;
+const flag2 = false;
+
+if (flag1 || flag2) {
+  console.log("フラグのどちらかはtrueです");
+}
+
+if (flag1 && flag2) {
+  console.log("フラグは両方trueです");
+}
+
+// フラグのどちらかはtrueです
 
 
+// 例：ケース１：||を使用（nullを設定）
+const num = null;
+const fee = num || "金額未設定です";
+
+console.log(fee); // 金額未設定です
 
 
+// 例：ケース２：||を使用（100を設定）
+const num = 100;
+const fee = num || "金額未設定です";
 
+console.log(fee); // 100
+
+// ||はその左辺がtrue判定なら即座に左辺を返却し、false判定な右辺を返却する論理演算子（短絡評価）
+
+
+// 例：論理演算子を使った条件分岐（再度、最初の例を見てみる）
+const flag1 = true;
+const flag2 = false;
+
+if (flag1 || flag2) {
+  console.log("フラグのどちらかはtrueです");
+}
+
+
+// 例：ケース３：&&を使用（100を設定）
+const num2 = 100;
+const fee2 = num2 && "何か設定されました";
+
+console.log(fee2); // 何か設定されました
+
+// &&はその左辺がfalse判定なら即座に左辺を返却し、true判定なら右辺を返す論理演算子
+
+
+// 文字列もJSでは暗黙的にbooleanに変換できる。if ("主田"){~}みたいに、暗黙的にtrueに変換される値をtruthy, falseに変換されるものをfalsy。
+// 0や""(空文字)はfalsyだけど、[](空配列)や{}(空オブジェクト)はtruthy
+// nullとundefined判定されるものはnullishと呼ばれる
 
 
 
